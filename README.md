@@ -1,12 +1,68 @@
-# Getting Started with Create React App
+# `src` Subordinate module configuration 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+src/
+├── api        API handlers
+├── assets     Images, Svg files
+├── components React UI components
+├── hooks      React custom hooks
+├── modules    React useReducer
+├── types      Type defination
+└── utilities  Function handlers
+```
 
-## Available Scripts
+# About #api
+ * Api handlers such as HTTP methods working with Axios created and exported here
+# Assets SVG + Images handler
 
-In the project directory, you can run:
+* If there is a change in Icon, Logo, etc., add a file under `/ src / assets` and convert it to React component with the following command.
+   --In the case of Icon
+     `yarn svgr: icon`
+   --For Logo
+     `yarn svgr: logo`
 
-### `yarn start`
+# Component classification
+
+* atoms
+  * Minimum unit component
+  * Reusable components
+  * Do not use other components
+  * In principle, do not have a margin that affects other components
+* molecules
+  * Components that combines atoms
+  * Reusable components
+  * atoms can be used
+* organismos
+  * A component with one meaning created by combining lower layers (atoms, molecules)
+* templates
+  * Components to be placed in combination with organism os
+* pages
+  * Units routed by react-router
+
+# About #hooks
+  * Create custom hooks here 
+  * Add use at the beginning of each custom hook to help React easily defines which is a custom hook function, if not React will understand this is a Javascript function
+# About # modules (useReducer and useContext related processing)
+
+* Place useReducer and useContext related files under `src / modules`
+* In principle, the directory directly under `src / modules` is a data unit.
+* Have the following files for each module
+   * index.ts
+     --export reducer
+   * actions.ts
+     --Has Action type definition, Action
+   * reducer.ts
+     --Has store type definition and reducer processing
+
+# About #types
+ * Typescript defination created here
+ * Create typescript files with .ts instead of .tsx
+
+# About #utilities
+ * Containing defined functions returning value when they called
+
+ 
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +70,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `npm build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +85,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `npm eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -68,3 +124,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
