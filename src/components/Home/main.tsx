@@ -6,9 +6,6 @@ const Home: React.FC<{}> = () => (
       <h1>
         Hello world !
       </h1>
-      <p>
-        Home component
-      </p>
     </header>
   </div>
 );
