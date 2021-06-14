@@ -61,7 +61,55 @@ src/
 # About #utilities
  * Containing defined functions returning value when they called
 
- 
+# About styles containing Sass structure
+* sass
+|– base/ 
+|     |– _all.scss 
+|     |– _mixins.scss 
+|     |– _reset.scss
+|     |– _variables.scss
+|     
+|– layout/ 
+|     |– _all.scss 
+|     |– _header.scss 
+|     |– _footer.scss  
+| 
+|– modules/
+|     |– _all.scss 
+|     |– _button.scss 
+|     |– _card.scss  
+| 
+|– pages/ 
+|     |– _all.scss 
+|     |– _home.scss 
+|     |– _about.scss  
+|     |– _contact.scss 
+|     |– _admin.scss 
+|
+|– state/ 
+|     |– _all.scss 
+|     |– _text.scss 
+|     |– _space.scss 
+|
+ main.scss 
+
+
+  * Thư mục con base: Chứa những file scss cho những nội dung chung của cả trang web
+        _mixins.scss: chứa khai báo những hàm dùng chung trong cả project
+        _reset.scss: khai báo lại những thuộc tính chung
+        _variables.scss: khai báo những biến dùng trong project. Ví dụ: màu sắc, kích thước,...
+  * Thư mục con layout: Chứa những file scss cho layout của trang web
+        _header.scss: chứa khai báo style cho thẻ header
+        _footer.scss: chứa khai báo style cho thẻ footer
+  * Thư mục con modules: Chứa style những thành phần nhỏ, có thể tái sử dụng của trang web
+        _button.scss: chứa khai báo style cho thành phần button
+        _checkbox.scss: chứa khai báo style cho thành phần checkbox
+  * Thư mục con state: Chứa style của trạng thái của những phần tử nhỏ như text, space,...
+        _text.scss: chứa khai báo style cho chữ một cách chi tiết
+        _space.scss: chứa khai báo style cho khoảng cách giữa các phần tử
+
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
