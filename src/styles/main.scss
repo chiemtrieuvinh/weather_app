@@ -4,6 +4,19 @@
 @import 'pages/all';
 @import 'base/all';
 
+
+.Wrapper{
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size:48px;
+  color:white;
+  line-height: 1.6;
+  letter-spacing: 8px;
+  position: relative
+}
+
 .App{
 
 }

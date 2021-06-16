@@ -1,0 +1,38 @@
+.Home{
+  width:100%;
+  height:100%;
+  position: absolute;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  .ContentWrapper{
+    width:80%;
+    height:80vh;
+    // background:black;
+    text-align:left;
+    position:relative;
+    .WhiteLayer{
+      width:100%;
+      height:100%;
+      position:absolute
+    };
+    .ContentItem{
+      width:100%;
+      height:100%;
+      position:absolute
+    }
+  }
+}
+
+.BlackLayer {
+  width:100%;
+  height:100%;
+  background-color: black;
+  opacity:0.5
+}
+.WhiteLayer {
+  width:100%;
+  height:100%;
+  background-color: white;
+  opacity:0
+}
