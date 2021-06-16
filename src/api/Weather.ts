@@ -15,11 +15,9 @@ export const getLocationSearch = async (
 
 export const getMetaWeatherLocationDay = async (
   locationId: string,
-  targetDate:string,
-): Promise<Array<IWeatherLocationDay>> => {
+): Promise<IWeatherLocationDay> => {
   const params = {
-    targetDate,
   };
-  const response = await ApiClient.get(`/api/location/${locationId}`, params);
+  const response = await ApiClient.get(`/api/location/${locationId}/`, params);
   return response.data;
 };
