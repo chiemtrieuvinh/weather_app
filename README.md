@@ -94,19 +94,19 @@ src/
  main.scss 
 
 
-  * Thư mục con base: Chứa những file scss cho những nội dung chung của cả trang web
-        _mixins.scss: chứa khai báo những hàm dùng chung trong cả project
-        _reset.scss: khai báo lại những thuộc tính chung
-        _variables.scss: khai báo những biến dùng trong project. Ví dụ: màu sắc, kích thước,...
-  * Thư mục con layout: Chứa những file scss cho layout của trang web
-        _header.scss: chứa khai báo style cho thẻ header
-        _footer.scss: chứa khai báo style cho thẻ footer
-  * Thư mục con modules: Chứa style những thành phần nhỏ, có thể tái sử dụng của trang web
-        _button.scss: chứa khai báo style cho thành phần button
-        _checkbox.scss: chứa khai báo style cho thành phần checkbox
-  * Thư mục con state: Chứa style của trạng thái của những phần tử nhỏ như text, space,...
-        _text.scss: chứa khai báo style cho chữ một cách chi tiết
-        _space.scss: chứa khai báo style cho khoảng cách giữa các phần tử
+  * Base subdirectory: Contains scss files for the common content of the whole website
+        _mixins.scss: contains declarations of common functions in the whole project
+        _reset.scss: redeclare common properties
+        _variables.scss: declares the variables used in the project. For example: color, size,...
+  * Layout subdirectory: Contains scss files for the layout of the website
+        _header.scss: contains the style declaration for the header tag
+        _footer.scss: contains the style declaration for the footer tag
+  * Modules subdirectory: Contains style small, reusable components of the website
+        _button.scss: contains the style declaration for the button element thành
+        _checkbox.scss: contains the style declaration for the checkbox element
+  * State subdirectory: Contains the style of the state of small elements such as text, space, ...
+        _text.scss: contains a detailed text style declaration
+        _space.scss: contains the style declaration for the spacing between elements 
 
 
 
