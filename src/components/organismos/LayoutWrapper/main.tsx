@@ -1,4 +1,3 @@
-import { JSXElement } from '@babel/types';
 import React, { ReactNode } from 'react';
 
 const LayoutWrapper: React.FC<{
