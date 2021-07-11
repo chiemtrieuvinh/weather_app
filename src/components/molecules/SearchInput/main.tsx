@@ -13,8 +13,8 @@ type SearchInputProps = {
 const SearchInput: React.FC<SearchInputProps> = ({
   id, name, value, onChange, styleProps = {},
 }) => (
-  <FlexBox alignItems="center">
-    <i className="fa fa-search" style={{ fontSize: 24 }} />
+  <FlexBox alignItems="flex-end" justifyContent="center">
+    <i className="fa fa-search" style={{ fontSize: 20, color: 'white', marginRight: 7.5 }} />
     <Input id={id} name={name} value={value} onChange={onChange} styleProps={styleProps} />
   </FlexBox>
 );

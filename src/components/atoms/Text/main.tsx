@@ -10,11 +10,10 @@ type TText = {
   children: React.ReactNode
 }
 const Text: React.FC<TText> = ({
-  children, size = 16, color = 'black', bold, styleProps, className,
+  children, color = 'black', bold, styleProps, className,
 }) => (
-  <span
+  <div
     style={{
-      fontSize: size,
       color,
       fontFamily: 'inherit',
       fontWeight: bold ? 'bold' : 'normal',
@@ -23,7 +22,7 @@ const Text: React.FC<TText> = ({
     className={className}
   >
     {children}
-  </span>
+  </div>
 );
 
 export default Text;

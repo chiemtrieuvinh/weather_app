@@ -15,7 +15,7 @@ const styles = {
   fontWeight: 400,
   lineHeight: 1.6,
   letterSpacing: '0.2px',
-  border: '1px solid white',
+  borderBottom: '2px solid white',
 };
 
 const Input: React.FC<InputProps> = ({
