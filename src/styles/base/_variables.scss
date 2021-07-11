@@ -1,0 +1,20 @@
+$base-text: 12px;
+
+.otomano-font {
+  font-family: 'Otomanopee One', sans-serif !important;
+}
+.sm-text {
+  font-size: $base-text
+}
+.standard-text {
+  font-size: 16px
+}
+.md-text {
+  font-size: $base-text*2
+}
+.lg-text {
+  font-size: $base-text*3
+}
+.xl-text {
+  font-size: $base-text*4
+}
