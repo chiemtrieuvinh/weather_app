@@ -1,21 +1,32 @@
 import React from 'react';
 import Home from 'components/pages/Home/main';
-import LayoutWrapper from 'components/organismos/LayoutWrapper/main';
 import Image from 'components/atoms/Image/main';
+import Container from 'react-bootstrap/Container';
 import 'styles/main.scss';
 import './App.css';
 
 const App: React.FC<{}> = () => (
-  <div className="App">
-    <header />
-    <body>
-      <LayoutWrapper>
-        <Image src="https://wallpapercave.com/wp/wp6175133.jpg" alt="background-image" styleProps={{ position: 'absolute' }} />
-        <div className="BlackLayer" />
-        <Home />
-      </LayoutWrapper>
-    </body>
-  </div>
+  <Container
+    className="position-relative p-0 m-0"
+    fluid={true}
+  >
+    <div
+      className="position-absolute w-100 h-100"
+      style={{
+        minHeight: '100vh',
+      }}
+    >
+      <Image src="https://wallpapercave.com/wp/wp5401016.jpg" />
+    </div>
+    <div
+      className="position-absolute w-100 h-100"
+      style={{
+        minHeight: '100vh',
+      }}
+    >
+      <Home />
+    </div>
+  </Container>
 );
 
 export default App;
