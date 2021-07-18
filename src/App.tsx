@@ -2,6 +2,7 @@ import React from 'react';
 import Home from 'components/pages/Home/main';
 import Image from 'components/atoms/Image/main';
 import Container from 'react-bootstrap/Container';
+import { WeatherDetailProvider } from 'hooks/context/weatherDetails';
 import 'styles/main.scss';
 import './App.css';
 
@@ -24,7 +25,9 @@ const App: React.FC<{}> = () => (
         minHeight: '100vh',
       }}
     >
-      <Home />
+      <WeatherDetailProvider>
+        <Home />
+      </WeatherDetailProvider>
     </div>
   </Container>
 );

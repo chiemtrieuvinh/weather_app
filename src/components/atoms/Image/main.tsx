@@ -5,6 +5,7 @@ type ImageProps = {
   src: string;
   alt?: string;
   styleProps?: StyleProps
+  role?: string
 }
 
 const styles = {
@@ -14,7 +15,7 @@ const styles = {
 };
 
 const Image: React.FC<ImageProps> = ({
-  src, alt, styleProps,
-}): ReactElement<HTMLImageElement> => <img src={src} alt={alt} style={{ ...styles, ...styleProps }} />;
+  src, alt, styleProps, role = 'image-value',
+}): ReactElement<HTMLImageElement> => <img role={role} src={src} alt={alt} style={{ ...styles, ...styleProps }} />;
 
 export default Image;

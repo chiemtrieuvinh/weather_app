@@ -5,11 +5,10 @@ import ApiClient from './ApiClient';
 export const getLocationSearch = async (
   queryLocation:string,
 ): Promise<Array<ISearchLocation>> => {
-  const params = {};
   const query = {
-    queryLocation,
+    query: queryLocation,
   };
-  const response = await ApiClient.get('/api/location/search/', query, params);
+  const response = await ApiClient.get('/api/location/search/', query);
   return response.data;
 };
 
