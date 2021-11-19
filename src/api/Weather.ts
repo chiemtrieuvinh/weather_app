@@ -3,20 +3,20 @@ import { IWeatherLocationDay } from 'types/WeatherLocationDayType';
 import ApiClient from './ApiClient';
 
 export const getLocationSearch = async (
-  queryLocation:string,
+  queryLocation:string = 'Ho Chi Minh City',
 ): Promise<Array<ISearchLocation>> => {
   const query = {
-    query: queryLocation,
+    location: queryLocation,
   };
-  const response = await ApiClient.get('/api/location/search/', query);
+  const response = await ApiClient.get('http://localhost:3030/api/location/search/', query);
   return response.data;
 };
 
 export const getMetaWeatherLocationDay = async (
-  locationId: string,
+  locationId: number,
 ): Promise<IWeatherLocationDay> => {
   const params = {
   };
-  const response = await ApiClient.get(`/api/location/${locationId}/`, params);
+  const response = await ApiClient.get(`http://localhost:3030/api/location/${locationId}/`, params);
   return response.data;
 };

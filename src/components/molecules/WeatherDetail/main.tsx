@@ -16,7 +16,7 @@ type WeatherDetailProps = {
 }
 
 const WeatherDetail: React.FC<WeatherDetailProps> = ({
-  day, minTemp, maxTemp, weatherState, weatherStateName, styleProps = {},
+  day, minTemp, maxTemp, weatherState, weatherStateName, styleProps,
 }) => {
   const getImageUrl = weatherState ? `https://www.metaweather.com/static/img/weather/png/64/${weatherState}.png` : '';
   return (

@@ -19,7 +19,7 @@ const styles = {
 };
 
 const Input: React.FC<InputProps> = ({
-  id, name, value, onChange, styleProps = {},
+  id, name, value, onChange, styleProps,
 }): ReactElement<HTMLInputElement> => <input id={id} name={name} value={value} onChange={onChange} style={{ ...styles, ...styleProps }} />;
 
 export default Input;

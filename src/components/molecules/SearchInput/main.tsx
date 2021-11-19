@@ -18,7 +18,7 @@ type SearchInputProps = {
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
-  id, name, value, onChange, styleProps = {}, callBack,
+  id, name, value, onChange, styleProps, callBack,
 }) => (
   <Form.Group as={Row} controlId="formSearch">
     <div className="d-flex align-items-flex-end justify-content-center w-20">

@@ -17,7 +17,7 @@ type WeatherCardProps = {
 }
 
 const WeatherCard: React.FC<WeatherCardProps> = ({
-  day, minTemp, maxTemp, weatherState, weatherStateName, styleProps = {},
+  day, minTemp, maxTemp, weatherState, weatherStateName, styleProps,
 }) => {
   const getImageUrl = weatherState ? `https://www.metaweather.com/static/img/weather/png/64/${weatherState}.png` : '';
   return (

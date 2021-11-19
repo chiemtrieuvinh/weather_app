@@ -11,7 +11,7 @@ import Container from 'react-bootstrap/Container';
 import { useWeatherDetails } from 'hooks/context/weatherDetails';
 import { getLocationSearch } from 'api/Weather';
 
-const Home: React.FC<{ styleProps?: StyleProps }> = ({ styleProps = {} }) => {
+const Home: React.FC<{ styleProps?: StyleProps }> = ({ styleProps }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [weatherInfo, updateWeatherDetails] = useWeatherDetails();
   const [searchValue, setSearchValue] = useState<string>('Ho Chi Minh City');
@@ -34,7 +34,7 @@ const Home: React.FC<{ styleProps?: StyleProps }> = ({ styleProps = {} }) => {
         setLoading(false);
       }
     } catch (error) {
-      setLoading(false);
+      // setLoading(false);
       throw new Error();
     }
   }, [searchValue, updateWeatherDetails]);
@@ -68,7 +68,8 @@ const Home: React.FC<{ styleProps?: StyleProps }> = ({ styleProps = {} }) => {
           <Text className="lg-text otomano-font text-center" color="white" styleProps={{ letterSpacing: 4, fontWeight: 500, marginBottom: 20 }}>
             Location:
             {' '}
-            {locationValue && locationValue[0] && locationValue[0].title || 'Location not found'}
+            123
+            {/* {locationValue && locationValue[0] && locationValue[0].title || 'Location not found'} */}
           </Text>
         </Col>
       </Row>
